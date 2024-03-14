@@ -1,32 +1,39 @@
-Project Overview
+# Project Overview
 
-It includes various GCP services like Compute Engine, Cloud SQL, and Cloud Storage to demonstrate a basic yet functional cloud infrastructure setup.
+This project is my final project of WTECH Cloud Engineering Program.
 
-Architecture
-The project consists of the following components:
+## Architecture
 
-Compute Engine: Hosts our application and serves as the main compute resource.
-Cloud SQL: Manages our database requirements, providing a robust and scalable relational database service.
-Cloud Storage: Used for storing application data and backups, ensuring durability and availability.
+The project is built using the following GCP components:
 
-To deploy this project, follow these steps:
+- **Compute Engine**: Serves as the backbone by hosting our application and providing the main compute resource.
+- **Cloud SQL**: Acts as the heart of our data management, offering a robust and scalable relational database service.
+- **Cloud Storage**: Functions as the brain for data storage, utilized for storing application data and backups, ensuring both durability and availability.
 
-Set up GCP Project
+## Deployment Steps
 
-Create a GCP Project: Log into the Google Cloud Console and create a new project.
-Enable APIs: Make sure to enable the Compute Engine, Cloud SQL, and Cloud Storage APIs for your project.
-Deploy Compute Engine Instance
-Navigate to the Compute Engine service in the Cloud Console.
+To get this project up and running, I briefly follow the outlined steps:
 
-Set up Cloud SQL
-Go to the Cloud SQL service in the Cloud Console.
-Click "Create Instance" and choose the SQL service that I require (MySQL, PostgreSQL, etc.).
-Configure my instance with a private IP and ensure it's in the same VPC as my Compute Engine instance.
+### Set up GCP Project
 
-Configure Cloud Storage
-Head over to the Cloud Storage section in the Cloud Console.
-Ensuring that I disable public access and enable versioning for the bucket.
+1. **Create a GCP Project**: I create a new project.
+2. **Enable APIs**: I ensured the **Compute Engine**, **Cloud SQL**, and **Cloud Storage APIs** are enabled for my project.
 
-Connecting Components
-Use the internal IP to connect my Compute Engine instance with the Cloud SQL database.
-Configure my application to use Cloud Storage for data that needs to be stored.
+### Deploy Compute Engine Instance
+
+- Navigate to the **Compute Engine** service in the Cloud Console and set up my instance, choosing the appropriate machine type and region.
+
+### Set up Cloud SQL
+
+1. Access the **Cloud SQL** service in the Cloud Console.
+2. Opt for "Create Instance" and select the desired SQL service PostgreSQL.
+3. Ensure my instance is configured with a private IP and resides in the same VPC as the Compute Engine instance for seamless connectivity.
+
+### Configure Cloud Storage
+
+- Move to the **Cloud Storage** section in the Cloud Console, create a new bucket, making sure to disable public access and enable versioning for enhanced data integrity.
+
+### Connecting Components
+
+- Establish a connection between the Compute Engine instance and Cloud SQL database using the internal IP.
+- Configure my application to leverage Cloud Storage for essential data storage needs.
